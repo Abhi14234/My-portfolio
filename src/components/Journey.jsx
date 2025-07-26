@@ -6,7 +6,7 @@ const timeline = [
     year: "2025",
     title: "🚀 Launched My Personal Portfolio",
     description:
-      "Built and deployed a full-stack portfolio using React, Tailwind, and Vite. Integrated resume download, live demos, and AI showcases. This marks the beginning of my bold career leap — fully aligned with my Rahu Antardasha for online growth and breakthroughs.",
+      "Built and deployed a full-stack portfolio using React, Tailwind, and Vite. Integrated resume download, live demos, and AI showcases. This marks the beginning of my bold career leap ",
   },
   {
     year: "2024",
