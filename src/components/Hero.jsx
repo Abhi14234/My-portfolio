@@ -32,12 +32,23 @@ export default function Hero() {
             }}
           />
         </div>
-        <a
-          href="#projects"
-          className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition"
-        >
-          View My Work
-        </a>
+        <div className="flex flex-wrap sm:flex-nowrap gap-4 justify-center md:justify-start mt-4">
+          <a
+            href="#projects"
+            className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition"
+          >
+            View My Work
+          </a>
+
+          <a
+            href="/Abhijeet_Resume.pdf"
+            download
+            className="inline-block border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition"
+          >
+            Download Resume
+          </a>
+        </div>
+
       </motion.div>
 
       {/* Right Photo */}
