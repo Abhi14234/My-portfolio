@@ -9,11 +9,13 @@ import Footer from './components/Footer';
 import ThemeSwitcher from './components/ThemeSwitcher';
 import ParticlesBg from './components/ParticlesBg';
 import Journey from './components/Journey';
+
 export default function App() {
   const [darkMode, setDarkMode] = useState(true);
+
   return (
-    <div className={darkMode ? 'dark' : ''}>
-      <div className="relative bg-white text-gray-900 dark:bg-[#0f172a] dark:text-white transition duration-300 overflow-x-hidden">
+    <div className={darkMode ? 'dark min-h-screen' : 'min-h-screen'}>
+      <div className="relative z-10 bg-white text-gray-900 dark:bg-[#0f172a] dark:text-white transition duration-300 overflow-x-hidden">
         <ParticlesBg />
         <ThemeSwitcher toggle={() => setDarkMode(!darkMode)} />
         <Navbar />
