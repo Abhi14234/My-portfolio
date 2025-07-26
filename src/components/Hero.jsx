@@ -52,6 +52,12 @@ export default function Hero() {
           >
             📄 Download Resume
           </a>
+          <a
+            href="#contact"
+            className="relative inline-block px-8 py-3 font-bold text-white rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-xl animate-pulse hover:scale-110 transition-transform duration-300 border border-white/20 hover:shadow-[0_0_20px_#a855f7,0_0_40px_#ec4899] hover:animate-none"
+          >
+            💼 Hire Me
+          </a>
         </div>
       </motion.div>
 
