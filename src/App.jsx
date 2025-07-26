@@ -8,7 +8,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ThemeSwitcher from './components/ThemeSwitcher';
 import ParticlesBg from './components/ParticlesBg';
-
+import Journey from './components/Journey';
 export default function App() {
   const [darkMode, setDarkMode] = useState(true);
   return (
@@ -19,6 +19,7 @@ export default function App() {
         <Navbar />
         <Hero />
         <About />
+        <Journey />
         <Skills />
         <Projects />
         <Contact />
