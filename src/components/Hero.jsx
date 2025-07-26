@@ -1,13 +1,30 @@
+// src/components/Hero.jsx
 import React from 'react';
 
 export default function Hero() {
   return (
-    <section id="home" className="h-screen flex flex-col justify-center items-center text-center px-4">
-      <h2 className="text-4xl md:text-6xl font-extrabold">Hi, I'm <span className="text-indigo-500">Abhijeet</span></h2>
-      <p className="mt-4 text-lg md:text-2xl max-w-xl">AI Developer • Data Engineer • Tech Explorer</p>
-      <a href="#projects" className="mt-8 px-6 py-3 bg-indigo-600 text-white rounded-xl shadow-md hover:bg-indigo-700 transition">
-        View My Work
-      </a>
+    <section className="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center px-6 py-16 gap-10">
+      <div className="md:w-1/2 text-center md:text-left">
+        <h1 className="text-5xl font-extrabold mb-4">
+          Hello, I'm <span className="text-blue-500">Abhijeet</span>
+        </h1>
+        <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">
+          AI Software Engineer | Data Engineer | Visionary Technologist
+        </p>
+        <a
+          href="#projects"
+          className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition"
+        >
+          View My Work
+        </a>
+      </div>
+      <div className="md:w-1/3">
+        <img
+          src="/profile.jpg"
+          alt="Abhijeet Kumar"
+          className="rounded-full w-64 h-64 object-cover shadow-2xl border-4 border-blue-500"
+        />
+      </div>
     </section>
   );
 }
