@@ -1,11 +1,13 @@
-// src/components/Hero.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import Typewriter from 'typewriter-effect';
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center px-6 py-20 gap-10 overflow-hidden bg-gradient-to-br from-white via-blue-50 to-blue-100 dark:from-zinc-900 dark:via-zinc-800 dark:to-zinc-900">
+    <section
+      id="home"  // 👈 Add this line
+      className="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center px-6 py-20 gap-10 overflow-hidden bg-gradient-to-br from-white via-blue-50 to-blue-100 dark:from-zinc-900 dark:via-zinc-800 dark:to-zinc-900"
+    >
       {/* Left Content */}
       <motion.div
         className="md:w-1/2 text-center md:text-left"

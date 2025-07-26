@@ -42,7 +42,7 @@ const timeline = [
 
 export default function Journey() {
   return (
-    <section className="px-6 py-16 bg-gray-50">
+    <section id="journey" className="px-6 py-16 bg-gray-50">
       <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
         📜 My Journey
       </h2>

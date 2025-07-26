@@ -4,7 +4,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
 
-  const sections = ['Home', 'About', 'Skills', 'Projects', 'Contact'];
+  const sections = ['Home', 'About','Journey', 'Skills', 'Projects', 'Contact'];
 
   // Handle active link based on scroll position
   useEffect(() => {
