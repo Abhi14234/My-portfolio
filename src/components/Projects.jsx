@@ -6,7 +6,11 @@ const projects = [
     description: 'Optimized delivery route planner using BallTree and clustering.',
     link: 'https://github.com/Abhi14234/RouteAssignmentTool',
   },
-  
+  {
+    title: 'Portfolio Site',
+    description: 'Portfolio Site using vite + React + Tailwind',
+    link: 'https://github.com/Abhi14234/My-portfolio',
+  },
 ];
 
 export default function Projects() {
