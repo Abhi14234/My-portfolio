@@ -15,6 +15,12 @@ const projects = [
     link: 'https://github.com/Abhi14234/My-portfolio',
     tags: ['React', 'Tailwind', 'Vite'],
   },
+  {
+    title: 'Snake Game AI',
+    description: 'AI that learns to play Snake using Neural Networks and Genetic Algorithms.',
+    link: 'https://github.com/Abhi14234/snake-ai-neuroevolution',  // Replace with your actual GitHub link
+    tags: ['Python', 'Neuroevolution', 'Genetic Algorithm', 'AI'],
+  },
 ];
 
 export default function Projects() {
