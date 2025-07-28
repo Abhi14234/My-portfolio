@@ -18,7 +18,7 @@ const projects = [
   {
     title: 'Snake Game AI',
     description: 'AI that learns to play Snake using Neural Networks and Genetic Algorithms.',
-    link: 'https://github.com/Abhi14234/snake-ai-neuroevolution',  // Replace with your actual GitHub link
+    link: 'https://github.com/Abhi14234/AI_Snake',  // Replace with your actual GitHub link
     tags: ['Python', 'Neuroevolution', 'Genetic Algorithm', 'AI'],
   },
 ];
