@@ -24,6 +24,7 @@ export default function Hero() {
               strings: [
                 'AI Software Engineer 💡',
                 'Data Engineer 🔧',
+                'University of York Graduate 🧑‍🎓',
                 'Vedic Tech Visionary 🔭',
                 'Full-Stack Developer 🧠',
               ],
@@ -35,7 +36,7 @@ export default function Hero() {
           />
         </div>
         <p className="mb-6 text-lg text-zinc-700 dark:text-zinc-400 max-w-xl">
-          Bridging ancient wisdom with modern tech. I build intelligent systems, automate data flows, and craft scalable AI experiences with impact.
+          MSc. in Computer Science from uni of york. Bridging ancient wisdom with modern tech. I build intelligent systems, automate data flows, and craft scalable AI experiences with impact.
         </p>
         <div className="flex flex-wrap sm:flex-nowrap gap-4 justify-center md:justify-start mt-4">
           <a

@@ -40,11 +40,25 @@ const timeline = [
   },
   {
     year: "Before 2020",
-    title: "🧠 Graduated with Bachelor of Engineering",
+    title: "🧠 Bachelor of Engineering",
     description:
-      "Mastered Python, C++, SQL, and system design through passion projects. Built automation scripts and backend tools. This was my foundation for everything that followed.",
+      "Graduated with B.Tech in Computer Science From MIT Pune. Mastered Python, C++, SQL, and system design through passion projects. Built automation scripts and backend tools. This was my foundation for everything that followed.",
   },
 ];
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 60 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.15,
+      duration: 0.7,
+      type: "spring",
+      stiffness: 50,
+    },
+  }),
+};
 
 export default function Journey() {
   return (
@@ -52,8 +66,8 @@ export default function Journey() {
       {/* Section Title */}
       <motion.h2
         className="text-4xl font-bold text-center text-gray-800 dark:text-white mb-12"
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
@@ -62,8 +76,7 @@ export default function Journey() {
 
       {/* Timeline Container */}
       <div className="relative border-l-4 border-indigo-600 dark:border-indigo-400 ml-4">
-
-        {/* Optional Background Line Glow */}
+        {/* Glowing vertical line */}
         <div className="absolute left-[-2px] top-0 h-full w-px bg-gradient-to-b from-indigo-200 to-transparent dark:from-indigo-500 dark:to-transparent"></div>
 
         {timeline.map((item, index) => {
@@ -72,13 +85,19 @@ export default function Journey() {
             <motion.div
               key={index}
               className="mb-12 ml-6 relative"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1, type: 'spring' }}
+              initial="hidden"
+              whileInView="visible"
               viewport={{ once: true }}
+              custom={index}
+              variants={cardVariants}
             >
-              {/* Timeline Dot */}
-              <span className="absolute left-[-0.8rem] top-2 z-10">
+              {/* Timeline Dot with animation */}
+              <motion.span
+                className="absolute left-[-0.8rem] top-2 z-10"
+                initial={{ scale: 0, rotate: -90 }}
+                whileInView={{ scale: 1, rotate: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+              >
                 <span
                   className={`absolute inline-flex h-4 w-4 rounded-full ${
                     isCurrentYear ? "bg-yellow-400 animate-ping" : "bg-indigo-600"
@@ -89,10 +108,13 @@ export default function Journey() {
                     isCurrentYear ? "bg-yellow-400" : "bg-indigo-600"
                   }`}
                 />
-              </span>
+              </motion.span>
 
               {/* Timeline Card */}
-              <div className="bg-white dark:bg-zinc-800 p-4 rounded-xl shadow-md transition-all">
+              <motion.div
+                className="bg-white dark:bg-zinc-800 p-5 rounded-xl shadow-md hover:shadow-xl transition-all"
+                whileHover={{ scale: 1.02 }}
+              >
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                   <span className="inline-block w-20 font-bold text-indigo-600 dark:text-yellow-400">
                     {item.year}
@@ -100,7 +122,7 @@ export default function Journey() {
                   — {item.title}
                 </h3>
                 <p className="mt-2 text-gray-700 dark:text-gray-300">{item.description}</p>
-              </div>
+              </motion.div>
             </motion.div>
           );
         })}
