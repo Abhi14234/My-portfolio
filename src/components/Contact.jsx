@@ -34,7 +34,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="min-h-screen px-6 py-20 bg-gradient-to-br from-zinc-100 to-white dark:from-zinc-800 dark:to-zinc-900 text-zinc-900 dark:text-white"
+      className="px-6 py-20 bg-gradient-to-br from-zinc-100 to-white dark:from-zinc-800 dark:to-zinc-900 text-zinc-900 dark:text-white"
     >
       <div className="max-w-3xl mx-auto text-center">
         <motion.h2
