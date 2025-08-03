@@ -62,7 +62,7 @@ const cardVariants = {
 
 export default function Journey() {
   return (
-    <section id="journey" className="px-6 py-16 bg-gray-50 dark:bg-zinc-900 relative overflow-hidden">
+    <section id="journey" className="px-6 py-16 bg-transparent relative overflow-hidden">
       {/* Section Title */}
       <motion.h2
         className="text-4xl font-bold text-center text-gray-800 dark:text-white mb-12"
