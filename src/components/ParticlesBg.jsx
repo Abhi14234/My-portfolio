@@ -34,42 +34,84 @@ export default function ParticlesBg() {
     },
     particles: {
       number: {
-        value: 100,
-        density: { enable: true, area: 800 },
-      },
-      color: {
-        value: isDark ? "#00ff00" : "#0044ff", // Green on dark, Blue on light
-      },
-      shape: {
-        type: "char",
-        character: {
-          value: ["0", "1", "{", "}", "<", ">", "/", ";", "=", "+", "-", "*"],
-          font: "monospace",
-          style: "",
-          weight: "400",
+        value: 80,
+        density: {
+          enable: true,
+          area: 900,
         },
       },
+      color: {
+        value: isDark ? ["#00ffff", "#ff00ff"] : ["#0066ff", "#00ffcc"],
+      },
+      shape: {
+        type: ["circle", "edge"],
+      },
       opacity: {
-        value: { min: 0.3, max: 0.8 },
+        value: 0.7,
         animation: {
           enable: true,
-          speed: 1,
-          minimumValue: 0.3,
+          speed: 1.2,
+          minimumValue: 0.2,
           sync: false,
         },
       },
       size: {
-        value: { min: 8, max: 14 },
+        value: { min: 2, max: 4 },
+        animation: {
+          enable: true,
+          speed: 3,
+          minimumValue: 0.3,
+          sync: false,
+        },
+      },
+      links: {
+        enable: true,
+        distance: 150,
+        color: isDark ? "#00ffff" : "#00aaff",
+        opacity: 0.4,
+        width: 1,
       },
       move: {
         enable: true,
-        speed: 0.6,
-        direction: "bottom",
+        speed: 1.2,
+        direction: "none",
         random: true,
-        outModes: { default: "out" },
+        straight: false,
+        outModes: { default: "bounce" },
+        attract: {
+          enable: true,
+          rotateX: 600,
+          rotateY: 1200,
+        },
+      },
+    },
+    interactivity: {
+      events: {
+        onHover: {
+          enable: true,
+          mode: "repulse",
+        },
+        onClick: {
+          enable: true,
+          mode: "push",
+        },
+        resize: true,
+      },
+      modes: {
+        repulse: {
+          distance: 120,
+          duration: 0.4,
+        },
+        push: {
+          quantity: 4,
+        },
       },
     },
     detectRetina: true,
+    backgroundMask: {
+      enable: false,
+    },
+    retina_detect: true,
   };
 
   return <Particles id="tsparticles" init={particlesInit} options={particleOptions} />;
