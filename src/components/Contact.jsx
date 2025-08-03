@@ -55,7 +55,7 @@ export default function Contact() {
           Open to new opportunities, exciting AI projects, or just a coffee chat ☕.
         </motion.p>
 
-        <div className="grid gap-6">
+        <div className="flex flex-wrap justify-center gap-6">
           {contacts.map((contact, index) => (
             <motion.a
               key={index}
